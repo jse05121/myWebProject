@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="travel">
+    <meta name="description" content="여행, 랜선, 코로나">
+
+    <title>Smile</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(".headC").click(function(){
+                $(".headB").slideToggle();
+            });
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/53523cfaae.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+<!-- header : 로고 + 검색 + 메뉴1 + 메뉴2 =시작 -->
+    <header>
+        <div class="containerH">
+
+            <div class="container-small">
+             <!-- 로고  -->
+            <a href="index.html" class="headA">SMILE :)</a>
+            </div>
+
+            <a href="index.html" class="headAA">:)</a>
+
+            <!-- 검색-->
+            <form class="search" action="https://www.google.com/search" method="get">
+                <input class="searchinput" type="search" name="q" id=""  placeholder="검색어를 입력해주세요">
+                <button class="searchbutton" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <!-- 메뉴1_모바일 버전-->
+             <button type="button" class="headC">
+                <span class="fa fa-bars" title="MENU"></span>
+             </button>
+
+            <!-- 메뉴1  -->
+            <nav class="headD">
+                <ul>
+                    <li><button class="login"><i class="fa-solid fa-book-open-reader"></i>로그인</button></li>
+                    <li><button class="login"><i class="fa-solid fa-address-card"></i>회원가입</button></li>
+                    <li><button class="login"><i class="fa-solid fa-circle-info"></i>고객센터</button></li>
+                </ul>
+            </nav>
+
+            <!-- login madal 시작 -->
+            <div class="loginA"> 
+                <div class="loginA-content"> 
+                    <span class="close-button">&times;</span> 
+                    <h1 class="title">로그인</h1> 
+                    <form action="#post.php" method="POST"> 
+                      <label for="email">ID</label> 
+                      <input class="loginB" type="email" name="email" placeholder="아이디" required="required"> 
+                      <label>Password</label> 
+                      <input class="loginB" name="message" placeholder="비밀번호" required="required"></input> 
+                      <div class="login_submit">
+                      <input type="submit" class="submit" value="로그인"> 
+                      <input type="button" class="cancel" value="취소"> 
+                    </div>
+                    </form> 
+                </div> 
+            </div>
+        </div>
+
+        <!-- 메뉴2 -->
+        <div class="contenainerM">
+            <nav class="headB">
+                <ul>
+                    <li><a href="index.html"><i class="fa fa-bars"></i></a></li>
+                    <li><a href="html/out.html">해외</a></li>
+                    <li><a href="html/in.html">국내</a></li>
+                    <li><a href="html/theme.html">테마</a></li>
+                    <li><a href="html/guide.html">guide</a></li>
+                    <li><a href="html/live.html">LIVE</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header> 
+<!-- header : 로고 + 검색 + 메뉴1 +메뉴2 =끝 -->
+ 
+<!-- main : vr 시작-->
+    <section class="conA">
+        <div class="container">
+            <iframe width="100%" height="400" allowfullscreen style="border-style:none;" 
+            src="https://cdn.pannellum.org/2.5/pannellum.htm#panorama=https://i.postimg.cc/WpYH6fcW/VRimage.jpg&amp;autoLoad=true"></iframe>
+        </div>
+    </section>
+<!-- main : vr 끝 -->
+
+<!-- main : 검색+사진 슬라이드 시작 -->
+    <section class="mainA">
+        <div class="containermainA">
+            <div class="text">
+               <h3>어떤 여행을 떠나시나요?</h3>
+               <hr>
+               <form class="searchB" action="https://www.google.com/search" method="get">
+                <input class="searchinputB" type="search" name="q" id=""  placeholder="어디로 떠나세요?">
+                <input class="searchinputC" type="place" name="place" id=""  placeholder="위치">
+
+                <input class="searchinputD" type="date" name="date" id step="3" 
+                min="2022-03-10" max="2099-12-31" placeholder="여행시작일 선택" >
+
+                <button class="searchbuttonB" type="submit">여행 검색</button>
+               </form>
+
+            </div>
+
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="https://image.hanatour.com/usr/manual/md/2022/01/PL00112971/PL00112971.jpg" style="width:100%">
+                  <div class="textS">Caption Text</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 3</div>
+                  <img src="https://image.hanatour.com/usr/manual/md/2022/02/PL00112965/PL00112965.jpg" style="width:100%">
+                  <div class="textS">Caption Two</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 3</div>
+                  <img src="https://image.hanatour.com/usr/manual/md/2022/03/PL00113010/pc_mb.jpg" style="width:100%">
+                  <div class="textS">Caption Three</div>
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+            </div>
+
+        </div>
+
+    </section>
+<!-- main : 검색+사진 슬라이드 끝-->
+
+
+<!--main : 여행 상품 시작-->
+<section class="conC">
+    <div class="containerC">
+        <div class="three">
+        <div class="t2">
+            <div class="text_conC">한국 귀국 후 <br> 자가격리 없는 <br> 해외여행</div>
+            <ul class="conC_ul">
+                <li class="conC_li"><button class="sel" onclick="changeOn_1()">설렘 가득한 사이판 커플여행</button></li>
+                <li class="conC_li"><button class="sel" onclick="changeOn_2()">아이와 함께 갈 수 있는 사이판</button></li>
+                <li class="conC_li"><button class="sel" onclick="changeOn_3()">멋진 씨티뷰, 싱가포르 식도락</button></li>
+            </ul>
+        </div>
+            <div class="t1">
+                <img class="t1_img" id="t1_img" src="images/ls1_1.jpg" alt="">
+                <div class="t1_inr">
+                    <h4 id="h1">싱가포르<br> 자유여행 5일</h4>
+                    <p id="p1">화려한 야경, ~~</p>
+                    <h3 id="h3_1">933,000원~</h3>
+                </div>
+            </div>
+
+            <div class="t1">
+                <img class="t1_img" id="t2_img" src="images/ls1_2.jpg" alt="">
+                <h4 id="h2">호주 시드니<br> 자유여행 8일</h4>
+                <p id="p2">오페라 하우스</p>
+                <h3 id="h3_2">1,025,000원~</h3>
+            </div>
+
+            <div class="t1">
+                <img class="t1_img" id="t3_img" src="images/ls1_3.jpg" alt="">
+                <h4 id="h3">영국 런던<br> 자유여행 3일</h4>
+                <p id="p3">빅벤 보실분</p>
+                <h3 id="h3_3">933,000원~</h3>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</section>
+<!--main : 여행 상품 끝-->
+
+
+<!--main : 여행 ranking 시작 -->
+<section class="ranking">
+
+    <div class="rank_warp">
+
+        <div class="card_top"><p>이달의 추천여행 TOP 3</p></div>
+
+        <div class="container_card">
+           
+        
+            <div class="container_rank">
+                <img src="images/Ranking_flip01.png" alt="img_rank" class="rank_image">
+                <div class="overlay">
+                  <div class="rank_text">
+                    <h3>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star-half-stroke"></i>
+                    </h3>
+                <h1>방콕/파타야</h1>
+                <p>동남아 베스트셀러 여행지</p>
+                <p>상품도 너무나 좋았고 중간에 코스가 너무 맘에 들었습니다. 가이드 설명 또한 너무 잘해주셨어요.</p>
+                  </div>
+                </div>
+            </div>
+        
+            <div class="container_rank">
+                <img src="images/Ranking_flip02.png" alt="img_rank" class="rank_image">
+                <div class="overlay">
+                  <div class="rank_text">
+                    <h3><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-regular fa-star"></i></h3>
+                <h1>싱가포르</h1>
+                <p>다양한 볼거리와 다채로운 관광</p>
+                <p>상품도 너무나 좋았고 중간에 코스가 너무 맘에 들었습니다. 가이드 설명 또한 너무 잘해주셨어요.</p>
+                  </div>
+                </div>
+            </div>
+        
+            <div class="container_rank">
+                <img src="images/Ranking_flip03.png" alt="img_rank" class="rank_image">
+                <div class="overlay">
+                  <div class="rank_text">
+                    <h3><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i><i
+                        class="fa-regular fa-star"></i></h3>
+                <h1>하와이</h1>
+                <p>지상 최대의 파라다이스</p>
+                <p>상품도 너무나 좋았고 중간에 코스가 너무 맘에 들었습니다. 가이드 설명 또한 너무 잘해주셨어요.</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+        </div>
+               
+</section>
+<!--main : 여행 ranking 끝 -->
+
+<!-- main : topbutton 시작-->
+<div class="topbutton">
+
+    <div class="chatting">
+        <button class="chat"><i class="fa-solid fa-comments"></i> 채팅상담</button>
+
+        <!-- 채팅상담 창 
+        <div id="chatA">
+            <span class="close-button">상담종료</span> 
+            <h4>채팅상담</h4> 
+            <form class="chatB" action="#post.php" method="POST"> 
+                <label>안녕하세요 고객님. 문의 사항을 적어주세요^^</label> 
+                <textarea name="message" placeholder="비밀번호" required="required"></textarea> 
+                <input type="button" class="cancel" value="취소"> 
+                <input type="submit" class="submit" value="보내기"> 
+            </form>
+        </div>-->
+    </div>
+
+   <div class="top">
+        <a href="#">TOP<i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+
+</div>
+<!-- main : topbutton 끝  -->
+
+<!-- footer : 시작 -->
+    <footer>
+        <div class="container">
+            <div class="footA">
+                <h2>SMILE TRAVEL</h2>
+                <p>IT 전문 여행사 <br>
+                <a href="http://smiletravel.net">http://smiletravel.net</a>
+            </p>
+            <nav class="footD">
+                <ul>
+                    <li><a href="" title="twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="" title="facebook"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="" title="google-plus"><i class="fab fa-google-plus"></i></a></li>
+                    <li><a href="" title="instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="" title="youtube"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </nav>
+            </div>
+        <nav class="footB">
+            <div>
+                <h3>ABOUT</h3>
+                <ul>
+                    <li><a href="">회사소개</a></li>
+                    <li><a href="">주소</a></li>
+                    <li><a href="">지도</a></li>
+                    <li><a href="">등록번호</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>SUPPORT</h3>
+                <ul>
+                    <li><a href="">문의</a></li>
+                    <li><a href="">고객센터</a></li>
+                    <li><a href="">다운로드</a></li>
+                    <li><a href="">자주묻는질문</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>CONTENTS</h3>
+                <ul>
+                    <li><a href="">유튜브</a></li>
+                    <li><a href="">트위터</a></li>
+                    <li><a href="">페이스북</a></li>
+                    <li><a href="">인스타그램</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="footC">
+            &copy; SMILE corp. All rights Reserved.
+        </div>
+
+        </div>
+    </footer>
+<!-- footer : 끝 -->
+
+<!-- javascript _ login modal -->
+    <script type="text/javascript"> 
+        var loginA = document.querySelector(".loginA"); 
+        var login = document.querySelector(".login"); 
+        var closeButton = document.querySelector(".close-button"); 
+        var cancelButton = document.querySelector(".cancel");
+
+       function toggleModal() { 
+        loginA.classList.toggle("show-modal"); 
+        }
+
+       function windowOnClick(event) { 
+            if (event.target === loginA) { 
+                toggleModal(); 
+            } 
+        }
+
+        login.addEventListener("click", toggleModal); 
+        closeButton.addEventListener("click", toggleModal); 
+        cancel.addEventListener("click", toggleModal); 
+        window.addEventListener("click", windowOnClick); 
+    </script>
+
+<!--javascript _ 여행상품 -->
+<script>
+    function changeOn_1(){
+        var img1 = document.getElementById("t1_img");
+        var img2 = document.getElementById("t2_img");
+        var img3 = document.getElementById("t3_img");
+        var h1 = document.getElementById("h1");
+        var h2 = document.getElementById("h2");
+        var h3 = document.getElementById("h3");
+        var p1 = document.getElementById("p1");
+        var p2 = document.getElementById("p2");
+        var p3 = document.getElementById("p3");
+        var h3_1 = document.getElementById("h3_1");
+        var h3_2 = document.getElementById("h3_2");
+        var h3_3 = document.getElementById("h3_3");
+
+        t1_img.src="images/ls1_1.jpg";
+        t2_img.src="images/ls1_2.jpg";
+        t3_img.src="images/ls1_3.jpg";
+        h1.innerText="싱가포르 자유여행 5일";
+        h2.innerText="호주 시드니 자유여행 8일";
+        h3.innerText="영국 런던 자유여행 3일";
+        p1.innerText="화려한 야경, ~~";
+        p2.innerText="오페라 하우스";
+        p3.innerText="빅벤 보실분";
+        h3_1.innerText="933,000원~";
+        h3_2.innerText="1,025,000원~";
+        h3_3.innerText="933,000원~";
+    }
+    function changeOn_2(){
+        var img1 = document.getElementById("t1_img");
+        var img2 = document.getElementById("t2_img");
+        var img3 = document.getElementById("t3_img");
+        var h1 = document.getElementById("h1");
+        var h2 = document.getElementById("h2");
+        var h3 = document.getElementById("h3");
+        var p1 = document.getElementById("p1");
+        var p2 = document.getElementById("p2");
+        var p3 = document.getElementById("p3");
+        var h3_1 = document.getElementById("h3_1");
+        var h3_2 = document.getElementById("h3_2");
+        var h3_3 = document.getElementById("h3_3");
+
+        t1_img.src="images/ls2_1.jpg";
+        t2_img.src="images/ls2_2.jpg";
+        t3_img.src="images/ls2_3.jpg";
+        h1.innerText="홍콩 자유여행 4일";
+        h2.innerText="도쿄 자유여행 4일";
+        h3.innerText="오사카 자유여행 4일";
+        p1.innerText="아름다운 바닷가인가요";
+        p2.innerText="나도 여행 가고싶다면?";
+        p3.innerText="여긴 어딜까요";
+        h3_1.innerText="123,000원";
+        h3_2.innerText="1,116,000원";
+        h3_3.innerText="422,000원";
+    }
+    function changeOn_3(){
+        var img1 = document.getElementById("t1_img");
+        var img2 = document.getElementById("t2_img");
+        var img3 = document.getElementById("t3_img");
+        var h1 = document.getElementById("h1");
+        var h2 = document.getElementById("h2");
+        var h3 = document.getElementById("h3");
+        var p1 = document.getElementById("p1");
+        var p2 = document.getElementById("p2");
+        var p3 = document.getElementById("p3");
+        var h3_1 = document.getElementById("h3_1");
+        var h3_2 = document.getElementById("h3_2");
+        var h3_3 = document.getElementById("h3_3");
+
+        t1_img.src="images/ls3_1.jpg";
+        t2_img.src="images/ls3_2.jpg";
+        t3_img.src="images/ls3_3.jpg";
+        h1.innerText="파리 자유여행 8일";
+        h2.innerText="제주도 자유여행 2일";
+        h3.innerText="헝가리 자유여행 9일";
+        p1.innerText="이곳은 어디 바닷가지";
+        p2.innerText="햇빛이 쏟아지는";
+        p3.innerText="야경 가득 감성 가득";
+        h3_1.innerText="316,000원";
+        h3_2.innerText="113,000원";
+        h3_3.innerText="1,224,000원";
+    }
+</script>
+<!-- javascript : 슬라이드  -->
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<script>
+    var slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    </script>
+    
+</body>
+</html>
