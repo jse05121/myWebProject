@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="travel">
+    <meta name="description" content="여행, 랜선, 코로나">
+
+    <title>Smile</title>
+    <!--제이쿼리-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <!--slick 라이브러리-->
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <script>
+        $(function () {
+            $(".headC").click(function () {
+                $(".headB").slideToggle();
+            });
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/53523cfaae.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/css/out_style.css">
+
+    <!--aos 라이브러리 : 스크롤 애니메이션-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+</head>
+
+
+<body>
+    <script> 
+        AOS.init(); 
+    </script>
+    <!-- header : 로고 + 검색 + 메뉴1 + 메뉴2 =시작 -->
+    <header>
+        <div class="containerH">
+
+            <div class="container-small">
+                <!-- 로고  -->
+                <a href="../index.html" class="headA">SMILE :)</a>
+            </div>
+
+            <a href="../index.html" class="headAA">:)</a>
+
+            <!-- 검색-->
+            <form class="search" action="https://www.google.com/search" method="get">
+                <input class="searchinput" type="search" name="q" id="" placeholder="검색어를 입력해주세요">
+                <button class="searchbutton" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <!-- 메뉴1_모바일 버전-->
+            <button type="button" class="headC">
+                <span class="fa fa-bars" title="MENU"></span>
+            </button>
+
+            <!-- 메뉴1  -->
+            <nav class="headD">
+                <ul>
+                    <li><button class="login"><i class="fa-solid fa-book-open-reader"></i>로그인</button></li>
+                    <li><button class="login"><i class="fa-solid fa-address-card"></i>회원가입</button></li>
+                    <li><button class="login"><i class="fa-solid fa-circle-info"></i>고객센터</button></li>
+                </ul>
+            </nav>
+
+            <!-- login madal 시작 -->
+            <div class="loginA">
+                <div class="loginA-content">
+                    <span class="close-button">&times;</span>
+                    <h1 class="title">로그인</h1>
+                    <form action="#post.php" method="POST">
+                        <label for="email">ID</label>
+                        <input class="loginB" type="email" name="email" placeholder="아이디" required="required">
+                        <label>Password</label>
+                        <input class="loginB" name="message" placeholder="비밀번호" required="required"></input>
+                        <div class="login_submit">
+                            <input type="submit" class="submit" value="로그인">
+                            <input type="button" class="cancel" value="취소">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- 메뉴2 -->
+        <div class="contenainerM">
+            <nav class="headB">
+                <ul>
+                    <li><a href="../index.html"><i class="fa fa-bars"></i></a></li>
+                    <li><a href="../html/out.html">해외</a></li>
+                    <li><a href="../html/in.html">국내</a></li>
+                    <li><a href="../html/theme.html">테마</a></li>
+                    <li><a href="../html/guide.html">guide</a></li>
+                    <li><a href="../html/live.html">LIVE</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    <!-- header : 로고 + 검색 + 메뉴1 +메뉴2 =끝 -->
+
+    <!-- main : 검색+사진 슬라이드 시작 -->
+    <section class="conA">
+        <div class="containerA">
+            <div class="all_slide">
+                <i class="fas fa-chevron-left prev"></i>
+                <!--왼쪽 방향 버튼-->
+                <i class="fas fa-chevron-right next"></i>
+                <!--오른쪽 방향 버튼-->
+                <div class="slide_wrapper">
+                    <div class="post">
+                        <img src="../images/lm3.jpg" class="slider_image" alt="">
+                        <div class="post_info">
+                            <h1 class="post_h1"><a href="#">당신의 랜선투어 시작지는? <br> 파리? </a></h1>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <img src="../images/lm4.jpg" class="slider_image" alt="">
+                        <div class="post_info">
+                            <h1 class="post_h1"><a href="#">어디로 가고싶으세요? <br> 호주?</a></h1>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <img src="../images/lm1.jpg" class="slider_image" alt="">
+                        <div class="post_info">
+                            <h1 class="post_h1"><a href="#">침대위에서 편안하게 <br> 즐기는 여행!</a></h1>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <img src="../images/lm2.jpg" class="slider_image" alt="">
+                        <div class="post_info">
+                            <h1 class="post_h1"><a href="#">멋진 야경도 <br>감상 가능!</a></h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="text">
+                    <h3 class="post_h3">어떤 여행을 떠나시나요?</h3>
+                    <hr>
+                    <form class="searchB" action="https://www.google.com/search" method="get">
+                        <input class="searchinputB" type="search" name="q" id="" placeholder="어디로 떠나세요?">
+                        <input class="searchinputC" type="place" name="place" id="" placeholder="위치">
+
+                        <input class="searchinputD" type="date" name="date" id step="3" min="2022-03-10"
+                            max="2099-12-31" placeholder="여행시작일 선택">
+
+                        <button class="searchbuttonB" type="submit">여행 검색</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--슬라이더-->
+    <script type="text/javascript">
+        /*$('.ex').slick();*/
+        $(document).ready(function () {
+            $('.slide_wrapper').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                nextArrow: $('.next'),
+                prevArrow: $('.prev'),
+            });
+        });
+    </script>
+
+
+    <!--main : 여행 상품 시작-->
+    <section class="conC">
+        <div class="containerC">
+            <div class="three" data-aos="fade-up">
+                <div class="t2">
+                    <div class="text_conC">고객님에게 <br> 추천드려요!</div>
+                    <ul class="conC_ul">
+                        <li class="conC_li"><button class="sel" onclick="changeOn_1()">떠나자 세계속으로!</button></li>
+                        <li class="conC_li"><button class="sel" onclick="changeOn_2()">왼쪽 오른쪽 뒹굴뒹굴</button></li>
+                        <li class="conC_li"><button class="sel" onclick="changeOn_3()">상하이 두바이 왔다 갔다</button></li>
+                    </ul>
+                </div>
+                <div class="t1">
+                    <img class="t1_img" id="t1_img" src="../images/out1_1_1.jpg" alt="">
+                    <div class="t1_inr">
+                        <h4 id="h1">두바이<br> 랜선투어 1시간</h4>
+                        <p id="p1">화려한 야경</p>
+                        <h3 id="h3_1">86,000원</h3>
+                    </div>
+                </div>
+
+                <div class="t1">
+                    <img class="t1_img" id="t2_img" src="../images/out1_1_2.jpg" alt="">
+                    <h4 id="h2">뉴욕<br> 랜선투어 3시간</h4>
+                    <p id="p2">자유의 여신상</p>
+                    <h3 id="h3_2">124,000원</h3>
+                </div>
+
+                <div class="t1">
+                    <img class="t1_img" id="t3_img" src="../images/out1_1_3.jpg" alt="">
+                    <h4 id="h3">태국 파타야<br>랜선투어 2시간</h4>
+                    <p id="p3">빅 부다 힐</p>
+                    <h3 id="h3_3">53,000원</h3>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        <!------두번째-------->
+        <div class="containerC">
+            <div class="three" data-aos="fade-up">
+                <div class="t2">
+                    <div class="text_conC">집밖은 <br> 위험하니까♬</div>
+                    <ul class="conC_ul">
+                        <li class="conC_li"><button class="sel" onclick="changeOn_4()">이 침대에 노를 저으면</button></li>
+                        <li class="conC_li"><button class="sel" onclick="changeOn_5()">어떤 바다 한가운데 있는기분</button></li>
+                        <li class="conC_li"><button class="sel" onclick="changeOn_6()">내 방이 안전한 이유</button></li>
+                    </ul>
+                </div>
+                <div class="t1">
+                    <img class="t1_img" id="t1_img_2" src="../images/out2_1_1.jpg" alt="">
+                    <div class="t1_inr">
+                        <h4 id="h1_20">싱가포르<br>랜선투어 1시간</h4>
+                        <p id="p1_2">화려한 야경</p>
+                        <h3 id="hh3_1">933,000원</h3>
+                    </div>
+                </div>
+
+                <div class="t1">
+                    <img class="t1_img" id="t2_img_2" src="../images/out2_1_2.jpg" alt="">
+                    <h4 id="h2_20">호주 시드니<br> 랜선투어 3시간</h4>
+                    <p id="p2_2">오페라 하우스</p>
+                    <h3 id="hh3_2">1,025,000원</h3>
+                </div>
+
+                <div class="t1">
+                    <img class="t1_img" id="t3_img_2" src="../images/out2_1_3.jpg" alt="">
+                    <h4 id="h3_20">영국 런던<br> 랜선투어 2시간</h4>
+                    <p id="p3_2">빅벤 보실분</p>
+                    <h3 id="hh3_3">933,000원</h3>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+        <!--------세번째-------->
+        <div class="containerC">
+            <div class="three" data-aos="fade-up">
+                <div class="t2">
+                    <div class="text_conC">여권도 <br> 필요없는 <br> 여행!</div>
+                    <ul class="conC_ul">
+                        <li class="conC_li"><button class="sel" onclick="changeOn_7()">생각한대로 이루어지는 여행</button></li>
+                        <li class="conC_li"><button class="sel" onclick="changeOn_8()">오늘 내 방이 퍼스트 클래스</button></li>
+                        <li class="conC_li"><button class="sel" onclick="changeOn_9()">이대로 누워서 세계일주 가능</button></li>
+                    </ul>
+                </div>
+                <div class="t1">
+                    <img class="t1_img" id="t1_img_3" src="../images/out3_1_1.jpg" alt="">
+                    <div class="t1_inr">
+                        <h4 id="h1_30">싱가포르<br>랜선투어 3시간</h4>
+                        <p id="p1_3">화려한 야경</p>
+                        <h3 id="hhh3_1">933,000원</h3>
+                    </div>
+                </div>
+
+                <div class="t1">
+                    <img class="t1_img" id="t2_img_3" src="../images/out3_1_2.jpg" alt="">
+                    <h4 id="h2_30">호주 시드니<br>랜선투어 3시간</h4>
+                    <p id="p2_3">오페라 하우스</p>
+                    <h3 id="hhh3_2">1,025,000원</h3>
+                </div>
+
+                <div class="t1">
+                    <img class="t1_img" id="t3_img_3" src="../images/out3_1_3.jpg" alt="">
+                    <h4 id="h3_30">영국 런던<br>랜선투어 3시간</h4>
+                    <p id="p3_3">빅벤 보실분</p>
+                    <h3 id="hhh3_3">933,000원</h3>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+
+
+    </section>
+    <!--main : 여행 상품 끝-->
+
+
+    <!--main : 여행 ranking 끝 -->
+
+    <!-- main : topbutton 시작-->
+    <div class="topbutton">
+
+        <div class="chatting">
+            <button class="chat"><i class="fa-solid fa-comments"></i> 채팅상담</button>
+
+            <!-- 채팅상담 창 
+        <div id="chatA">
+            <span class="close-button">상담종료</span> 
+            <h4>채팅상담</h4> 
+            <form class="chatB" action="#post.php" method="POST"> 
+                <label>안녕하세요 고객님. 문의 사항을 적어주세요^^</label> 
+                <textarea name="message" placeholder="비밀번호" required="required"></textarea> 
+                <input type="button" class="cancel" value="취소"> 
+                <input type="submit" class="submit" value="보내기"> 
+            </form>
+        </div>-->
+        </div>
+
+        <div class="top">
+            <a href="#">TOP<i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+
+    </div>
+    <!-- main : topbutton 끝  -->
+
+    <!-- footer : 시작 -->
+    <footer>
+        <div class="container">
+            <div class="footA">
+                <h2>SMILE TRAVEL</h2>
+                <p>IT 전문 여행사 <br>
+                    <a href="http://smiletravel.net">http://smiletravel.net</a>
+                </p>
+                <nav class="footD">
+                    <ul>
+                        <li><a href="" title="twitter"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="" title="facebook"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="" title="google-plus"><i class="fab fa-google-plus"></i></a></li>
+                        <li><a href="" title="instagram"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="" title="youtube"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <nav class="footB">
+                <div>
+                    <h3>ABOUT</h3>
+                    <ul>
+                        <li><a href="">회사소개</a></li>
+                        <li><a href="">주소</a></li>
+                        <li><a href="">지도</a></li>
+                        <li><a href="">등록번호</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>SUPPORT</h3>
+                    <ul>
+                        <li><a href="">문의</a></li>
+                        <li><a href="">고객센터</a></li>
+                        <li><a href="">다운로드</a></li>
+                        <li><a href="">자주묻는질문</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>CONTENTS</h3>
+                    <ul>
+                        <li><a href="">유튜브</a></li>
+                        <li><a href="">트위터</a></li>
+                        <li><a href="">페이스북</a></li>
+                        <li><a href="">인스타그램</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="footC">
+                &copy; SMILE corp. All rights Reserved.
+            </div>
+
+        </div>
+    </footer>
+    <!-- footer : 끝 -->
+
+    <!-- javascript _ login modal -->
+    <script type="text/javascript">
+        var loginA = document.querySelector(".loginA");
+        var login = document.querySelector(".login");
+        var closeButton = document.querySelector(".close-button");
+        var cancelButton = document.querySelector(".cancel");
+
+        function toggleModal() {
+            loginA.classList.toggle("show-modal");
+        }
+
+        function windowOnClick(event) {
+            if (event.target === loginA) {
+                toggleModal();
+            }
+        }
+
+        login.addEventListener("click", toggleModal);
+        closeButton.addEventListener("click", toggleModal);
+        cancel.addEventListener("click", toggleModal);
+        window.addEventListener("click", windowOnClick); 
+    </script>
+
+    <!--javascript _ 여행상품 -->
+    <script>
+        function changeOn_1() {
+            var img1 = document.getElementById("t1_img");
+            var img2 = document.getElementById("t2_img");
+            var img3 = document.getElementById("t3_img");
+            var h1 = document.getElementById("h1");
+            var h2 = document.getElementById("h2");
+            var h3 = document.getElementById("h3");
+            var p1 = document.getElementById("p1");
+            var p2 = document.getElementById("p2");
+            var p3 = document.getElementById("p3");
+            var h3_1 = document.getElementById("h3_1");
+            var h3_2 = document.getElementById("h3_2");
+            var h3_3 = document.getElementById("h3_3");
+
+            img1.src = "../images/out1_1_1.jpg";
+            img2.src = "../images/out1_1_2.jpg";
+            img3.src = "../images/out1_1_3.jpg";
+            h1.innerText = "두바이 \n 랜선투어 1시간";
+            h2.innerText = "뉴욕 \n 랜선투어 3시간";
+            h3.innerText = "태국 파타야 \n 랜선투어 2시간";
+            p1.innerText = "화려한 야경";
+            p2.innerText = "자유의 여신상";
+            p3.innerText = "빅 부다 힐";
+            h3_1.innerText = "86,000원";
+            h3_2.innerText = "124,000원";
+            h3_3.innerText = "53,000원";
+        }
+        function changeOn_2() {
+            var img1 = document.getElementById("t1_img");
+            var img2 = document.getElementById("t2_img");
+            var img3 = document.getElementById("t3_img");
+            var h1 = document.getElementById("h1");
+            var h2 = document.getElementById("h2");
+            var h3 = document.getElementById("h3");
+            var p1 = document.getElementById("p1");
+            var p2 = document.getElementById("p2");
+            var p3 = document.getElementById("p3");
+            var h3_1 = document.getElementById("h3_1");
+            var h3_2 = document.getElementById("h3_2");
+            var h3_3 = document.getElementById("h3_3");
+
+            img1.src = "../images/out1_2_1.jpg";
+            img2.src = "../images/out1_2_2.jpg";
+            img3.src = "../images/out1_2_3.jpg";
+            h1.innerText = "홍콩 \n랜선투어 3시간";
+            h2.innerText = "도쿄\n 랜선투어 1시간";
+            h3.innerText = "오사카\n 랜선투어 1시간";
+            p1.innerText = "아름다운 바닷가인가요";
+            p2.innerText = "나도 여행 가고싶다면?";
+            p3.innerText = "여긴 어딜까요";
+            h3_1.innerText = "123,000원";
+            h3_2.innerText = "1,116,000원";
+            h3_3.innerText = "422,000원";
+        }
+        function changeOn_3() {
+            var img1 = document.getElementById("t1_img");
+            var img2 = document.getElementById("t2_img");
+            var img3 = document.getElementById("t3_img");
+            var h1 = document.getElementById("h1");
+            var h2 = document.getElementById("h2");
+            var h3 = document.getElementById("h3");
+            var p1 = document.getElementById("p1");
+            var p2 = document.getElementById("p2");
+            var p3 = document.getElementById("p3");
+            var h3_1 = document.getElementById("h3_1");
+            var h3_2 = document.getElementById("h3_2");
+            var h3_3 = document.getElementById("h3_3");
+
+            img1.src = "../images/out1_3_1.jpg";
+            img2.src = "../images/out1_3_2.jpg";
+            img3.src = "../images/out1_3_3.jpg";
+            h1.innerText = "파리\n 랜선투어 5시간";
+            h2.innerText = "모스크바\n 랜선투어 4시간";
+            h3.innerText = "헝가리\n 랜선투어 2시간";
+            p1.innerText = "이곳은 어디 바닷가지";
+            p2.innerText = "햇빛이 쏟아지는";
+            p3.innerText = "야경 가득 감성 가득";
+            h3_1.innerText = "316,000원";
+            h3_2.innerText = "113,000원";
+            h3_3.innerText = "1,224,000원";
+        }
+        function changeOn_4() {
+            var img1 = document.getElementById("t1_img_2");
+            var img2 = document.getElementById("t2_img_2");
+            var img3 = document.getElementById("t3_img_2");
+            var h1 = document.getElementById("h1_20");
+            var h2 = document.getElementById("h2_20");
+            var h3 = document.getElementById("h3_20");
+            var p1 = document.getElementById("p1_2");
+            var p2 = document.getElementById("p2_2");
+            var p3 = document.getElementById("p3_2");
+            var h3_1 = document.getElementById("hh3_1");
+            var h3_2 = document.getElementById("hh3_2");
+            var h3_3 = document.getElementById("hh3_3");
+
+            img1.src = "../images/out2_1_1.jpg";
+            img2.src = "../images/out2_1_2.jpg";
+            img3.src = "../images/out2_1_3.jpg";
+            h1.innerText = "싱가포르 \n랜선투어 1시간";
+            h2.innerText = "호주 시드니 \n 랜선투어 3시간";
+            h3.innerText = "영국 런던 \n 랜선투어 2시간";
+            p1.innerText = "화려한 야경";
+            p2.innerText = "오페라 하우스";
+            p3.innerText = "빅벤 보실분";
+            h3_1.innerText = "933,000원";
+            h3_2.innerText = "1,025,000원";
+            h3_3.innerText = "933,000원";
+        }
+        function changeOn_5() {
+            var img1 = document.getElementById("t1_img_2");
+            var img2 = document.getElementById("t2_img_2");
+            var img3 = document.getElementById("t3_img_2");
+            var h1 = document.getElementById("h1_20");
+            var h2 = document.getElementById("h2_20");
+            var h3 = document.getElementById("h3_20");
+            var p1 = document.getElementById("p1_2");
+            var p2 = document.getElementById("p2_2");
+            var p3 = document.getElementById("p3_2");
+            var h3_1 = document.getElementById("hh3_1");
+            var h3_2 = document.getElementById("hh3_2");
+            var h3_3 = document.getElementById("hh3_3");
+
+            img1.src = "../images/out2_2_1.jpg";
+            img2.src = "../images/out2_2_2.jpg";
+            img3.src = "../images/out2_2_3.jpg";
+            h1.innerText = "홍콩 \n랜선투어 2시간";
+            h2.innerText = "도쿄\n 랜선투어 4시간";
+            h3.innerText = "오사카\n 랜선투어 3시간";
+            p1.innerText = "아름다운 바닷가인가요";
+            p2.innerText = "나도 여행 가고싶다면?";
+            p3.innerText = "여긴 어딜까요";
+            h3_1.innerText = "123,000원";
+            h3_2.innerText = "1,116,000원";
+            h3_3.innerText = "422,000원";
+        }
+        function changeOn_6() {
+            var img1 = document.getElementById("t1_img_2");
+            var img2 = document.getElementById("t2_img_2");
+            var img3 = document.getElementById("t3_img_2");
+            var h1 = document.getElementById("h1_20");
+            var h2 = document.getElementById("h2_20");
+            var h3 = document.getElementById("h3_20");
+            var p1 = document.getElementById("p1_2");
+            var p2 = document.getElementById("p2_2");
+            var p3 = document.getElementById("p3_2");
+            var h3_1 = document.getElementById("hh3_1");
+            var h3_2 = document.getElementById("hh3_2");
+            var h3_3 = document.getElementById("hh3_3");
+
+            img1.src = "../images/out2_3_1.jpg";
+            img2.src = "../images/out2_3_2.jpg";
+            img3.src = "../images/out2_3_3.jpg";
+            h1.innerText = "파리\n 랜선투어 5시간";
+            h2.innerText = "모스크바\n 랜선투어 2시간";
+            h3.innerText = "헝가리\n 랜선투어 3시간";
+            p1.innerText = "이곳은 어디 바닷가지";
+            p2.innerText = "햇빛이 쏟아지는";
+            p3.innerText = "야경 가득 감성 가득";
+            h3_1.innerText = "316,000원";
+            h3_2.innerText = "113,000원";
+            h3_3.innerText = "1,224,000원";
+        }
+        function changeOn_7() {
+            var img1 = document.getElementById("t1_img_3");
+            var img2 = document.getElementById("t2_img_3");
+            var img3 = document.getElementById("t3_img_3");
+            var h1 = document.getElementById("h1_30");
+            var h2 = document.getElementById("h2_30");
+            var h3 = document.getElementById("h3_30");
+            var p1 = document.getElementById("p1_3");
+            var p2 = document.getElementById("p2_3");
+            var p3 = document.getElementById("p3_3");
+            var h3_1 = document.getElementById("hhh3_1");
+            var h3_2 = document.getElementById("hhh3_2");
+            var h3_3 = document.getElementById("hhh3_3");
+
+            img1.src = "../images/out3_1_1.jpg";
+            img2.src = "../images/out3_1_2.jpg";
+            img3.src = "../images/out3_1_3.jpg";
+            h1.innerText = "싱가포르 \n 랜선투어 3시간";
+            h2.innerText = "호주 시드니 \n 랜선투어 3시간";
+            h3.innerText = "영국 런던 \n 랜선투어 3시간";
+            p1.innerText = "화려한 야경";
+            p2.innerText = "오페라 하우스";
+            p3.innerText = "빅벤 보실분";
+            h3_1.innerText = "933,000원";
+            h3_2.innerText = "1,025,000원";
+            h3_3.innerText = "933,000원";
+        }
+        function changeOn_8() {
+            var img1 = document.getElementById("t1_img_3");
+            var img2 = document.getElementById("t2_img_3");
+            var img3 = document.getElementById("t3_img_3");
+            var h1 = document.getElementById("h1_30");
+            var h2 = document.getElementById("h2_30");
+            var h3 = document.getElementById("h3_30");
+            var p1 = document.getElementById("p1_3");
+            var p2 = document.getElementById("p2_3");
+            var p3 = document.getElementById("p3_3");
+            var h3_1 = document.getElementById("hhh3_1");
+            var h3_2 = document.getElementById("hhh3_2");
+            var h3_3 = document.getElementById("hhh3_3");
+
+            img1.src = "../images/out3_2_1.jpg";
+            img2.src = "../images/out3_2_2.jpg";
+            img3.src = "../images/out3_2_3.jpg";
+            h1.innerText = "홍콩 \n랜선투어 3시간";
+            h2.innerText = "도쿄\n 랜선투어 2시간";
+            h3.innerText = "오사카\n 랜선투어 1시간";
+            p1.innerText = "아름다운 바닷가인가요";
+            p2.innerText = "나도 여행 가고싶다면?";
+            p3.innerText = "여긴 어딜까요";
+            h3_1.innerText = "123,000원";
+            h3_2.innerText = "1,116,000원";
+            h3_3.innerText = "422,000원";
+        }
+        function changeOn_9() {
+            var img1 = document.getElementById("t1_img_3");
+            var img2 = document.getElementById("t2_img_3");
+            var img3 = document.getElementById("t3_img_3");
+            var h1 = document.getElementById("h1_30");
+            var h2 = document.getElementById("h2_30");
+            var h3 = document.getElementById("h3_30");
+            var p1 = document.getElementById("p1_3");
+            var p2 = document.getElementById("p2_3");
+            var p3 = document.getElementById("p3_3");
+            var h3_1 = document.getElementById("hhh3_1");
+            var h3_2 = document.getElementById("hhh3_2");
+            var h3_3 = document.getElementById("hhh3_3");
+            img1.src = "../images/out3_3_1.jpg";
+            img2.src = "../images/out3_3_2.jpg";
+            img3.src = "../images/out3_3_3.jpg";
+            h1.innerText = "파리\n 랜선투어 3시간";
+            h2.innerText = "모스크바\n 랜선투어 3시간";
+            h3.innerText = "헝가리\n 랜선투어 2시간";
+            p1.innerText = "이곳은 어디 바닷가지";
+            p2.innerText = "햇빛이 쏟아지는";
+            p3.innerText = "야경 가득 감성 가득";
+            h3_1.innerText = "316,000원";
+            h3_2.innerText = "113,000원";
+            h3_3.innerText = "1,224,000원";
+        }
+    </script>
+
+
+
+
+    <!-- <script>
+    $(".chat").click(function() {
+        $(".chaA").show();
+        // goodsBtn을 클릭하면 goodsDiv를 보여줘라
+     
+    })
+     
+    $('.chat').click(function() {
+        $(".chaA").hide();
+        // goodsBtn을 클릭하면 goodsDiv를 숨겨라
+     
+    })
+    </script>
+     -->
+</body>
+
+</html>

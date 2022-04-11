@@ -1,0 +1,610 @@
+@charset "UTF-8";
+
+/*기본색상*/
+
+:root {
+    --main-color: #558600;
+    --accent-color: #ff9967;
+    --dark-main-color: #3f3f2d; 
+    --text-bright-color: #fff;
+    --text-dark-color: #000;
+    --accent-bright-color: #f7c9b2;
+    --icon-dark-color: #b1b1b1;
+    --large-width: 1200px;
+    --middle-width: 350px;
+}
+
+/*기본 폰트 크기 설정*/
+
+@media (max-width: 599px) {
+    :root {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 600px) and (max-width:799px) {
+    :root {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 800px) {
+    :root {
+        font-size: 18px;
+    }
+}
+
+body{
+    font-size: 16px;
+}
+
+/*기본 설정: 페이지 전체*/
+
+body {
+    margin:0;
+    font-family: 'Nanum Gothic', sans-serif;
+
+}
+
+/* header  */
+header{
+top:0; left:0; width:100%;
+background-color: rgba(255,255,255,0.9);
+z-index:100;
+}
+
+/* logo  */
+.headA{
+    display: inline-block;
+    line-height: 120px; padding: 0 100px;
+    color: var(--main-color);
+    font-family: Montserrat, sans-serif;
+    font-size: 40px; text-decoration: none;
+    font-weight: bold;
+}
+
+/* header search  */
+.search{
+    display: inline-block;
+    border: 2px solid var(--text-dark-color);
+    border-radius: 30px;
+    padding-top:10px;
+    text-align: center;
+    padding-bottom:0;
+    width: 500PX;
+    height: 55PX;
+}
+
+.searchinput{
+    border:none;
+    font-size:20px;
+    background: none;
+    outline:none;
+    color: var(--text-dark-color);
+    width: 300PX;
+    margin-left: 50px;
+            }
+.searchinput::placeholder{
+    font-size:20px;
+    text-align: center;
+    color: var(--icon-dark-color); 
+    font-family: 'Nanum Gothic';
+            }
+.searchbutton{
+    color: var(--text-dark-color);
+    float: right;
+    margin: 5px 10px 5px 5px;
+    text-align: center;
+    font-size: 22px;
+    border:none;
+    background: none;
+    justify-content: center;
+    align-items: center;
+            }
+
+/* nav menu 1 */
+.headD ul{
+    margin: 0; padding: 0; list-style: none;
+    display: flex;
+}
+.headD li{
+    flex: 1; 
+    width: 90px;
+
+}
+.headD button{
+    display: block; padding: 0;
+    border: none;
+    background: none;
+    color: var(--icon-dark-color); font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.headD button:hover{
+    color:var(--main-color);opacity: 0.7;
+}
+.headD i{
+    display: flex;
+    font-size: 40px;
+    text-align: center;
+    padding: 7px;
+}
+
+
+/* nav menu 2 */
+.headB ul{
+    margin: 0; padding: 0; list-style: none;
+    border-top: 2px solid var(--icon-dark-color);
+    border-bottom:2px solid  var(--icon-dark-color);
+    display: flex; 
+}
+.headB li{
+    flex: 1; 
+}
+.headB a{
+    display: block; 
+    padding: 15px;
+    color: var(--text-dark-color); font-size: 17px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.headB a:hover{
+    background-color: var(--accent-color); opacity: 0.7;
+    color:white;
+}
+
+/* 큰 화면  */
+@media screen and (min-width:768px){
+    header .container{
+        display:flex;
+        align-items:center;
+        justify-content: space-between;
+        max-width: var(--large-width);
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    .headB ul{
+        display: flex;
+    }
+     
+    .headC{
+        display: none;
+    }
+    .headB{
+        display: block !important;
+    }
+}
+/* 작은 화면  */
+@media screen and (max-width: 767px){
+    header .container-small{
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+    }
+    .headA{
+        line-height: 80px; 
+        padding: 0 0 0 5px;
+        font-size: 30px;
+    }
+    .search{
+        width: 280PX;
+        height: 40PX;
+        padding-top:3px;
+    }
+    .searchinput{
+        width: 160PX;
+        height: 30PX;
+        margin-left: 40px;
+                }
+    .searchinput::placeholder{
+        font-size:15px;
+        color: var(--icon-dark-color); 
+         font-family: 'Nanum Gothic';
+            }
+
+    .headB{display: none;}
+    .headB a{
+        font-size: 11px;
+    }
+    .headD{display: none;}
+    
+    .headC{
+        outline: none;
+        border: none; background: none; padding: 0;
+        color: var(--main-color);
+        margin-right: 10px; font-size: 30px;
+        cursor: pointer; opacity: 0.7;
+    }
+    .headC:hover{
+        opacity: 0.3;
+    }
+}
+
+/* login modal  */
+.title{
+    text-align: center;
+}
+label { 
+    display: block; 
+    margin-top: 10px; 
+    letter-spacing: 2px; 
+} 
+form { 
+    margin: 0 auto; 
+    width: 459px; 
+} 
+.loginB{ 
+    width: 439px; 
+    height: 50px; 
+    background-color: #efefef; 
+    border-radius: 6px; 
+    border: 1px solid #dedede; 
+    padding: 5px; 
+    font-size: 0.9em; 
+    color: #3a3a3a; 
+}  
+.loginB:focus{ 
+        border: 1px solid #97d6eb; 
+}
+
+.submit{ 
+    width: 127px; 
+    height: 48px; 
+    text-align: center; 
+    border: none;
+    cursor: pointer; 
+} 
+.submit:hover{ 
+    color: #fff; 
+    background-color: var(--main-color); 
+    opacity: 0.9; 
+} 
+.cancel { 
+    width: 127px; height: 48px; 
+    text-align: center; 
+    border: none; 
+    cursor: pointer; 
+} 
+.cancel:hover{ 
+    color: #fff; 
+    background-color: var(--accent-color); 
+    opacity: 0.9; 
+}
+
+.loginA { 
+    position: fixed; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    opacity: 0; 
+    visibility: hidden; 
+    transform: scale(1.1); 
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s; 
+} 
+.loginA-content { 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: white; 
+    padding: 1rem 1.5rem; 
+    width: 500px; 
+    height: 350px; 
+    border-radius: 0.5rem; 
+} 
+.close-button { 
+    float: right; 
+    width: 2rem; 
+    height: 2rem; 
+    line-height: 1.8rem; 
+    font-size: 20px;
+    text-align: center; 
+    cursor: pointer; 
+    border-radius: 0.25rem; 
+    background-color: lightgray; 
+} 
+.close-button:hover { 
+    background-color: darkgray; 
+} 
+.show-modal { 
+    opacity: 1; 
+    visibility: visible; 
+    transform: scale(1.0); 
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s; 
+} 
+
+
+/* Live VR 목록 */
+
+.vrproduct{
+    width: 100%; height: 400px;
+}
+
+.vrproduct h2{
+    text-align: center;
+}
+
+.vrvideo{
+    width: 100%; height: 500px;
+}
+
+.vrprolistA .container{
+    display: flex;
+    max-width: 1000px;
+    margin: 30px auto;
+    flex-wrap: wrap;
+    /* background-color: #fff; */
+}
+
+.vrprolistA article{
+    flex:  1 1 100px;
+}
+
+.vrprolistA a{
+    margin: 10px; display: block;
+    border: 2px solid var(--main-color);
+    text-decoration: none; color: var(--text-dark-color);
+}
+
+.vrprolistA a:hover{
+    opacity: 0.8;
+}
+
+.vrprolistA .photo{
+    min-height: 150px; background-size: cover;
+    background-position: center;
+}
+
+.vrprolistA h4{font-size: 14px; color: var(--text-dark-color);}
+.vrprolistA p{font-size: 12px; opacity: 0.8;}
+.vrprolistA .text{
+    margin: 10px;
+}
+
+/* <!-- 라이브채팅 --> */
+/* 메인 */
+#main h2{padding-top: 50px;}
+#main {
+    margin: auto; margin-bottom: 10px;
+    border-radius: 20px;
+    background-color: #f7c9b2;
+    text-align: center;
+    width: 100%;
+    height: 500px;
+  }
+  
+  /* 채팅 영역 */
+  #chat {
+    height: 60%;
+    width: 90%;
+    /* overflow-y: auto; */
+  }
+  
+  /* 접속 알림 */
+  .connect {
+    width: 90%;
+    margin: auto;
+    background-color: aquamarine;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  /* 접속 종료 알림 */
+  .disconnect {
+    width: 90%;
+    margin: auto;
+    background-color: indianred;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  /* 내가 보낸 메시지 */
+  .me {
+    width: 30%; height: 10%;
+    margin: 50px 60% 10px;
+    background-color: lemonchiffon;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  /* 상대방이 보낸 메시지 */
+  .other {
+    width: 90%;
+    margin: auto;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+
+
+/* 상품목록 */
+
+.goods_wrap{background-color: #a7c099; padding-top: 5px;}
+.product h2{margin: 50px 50px 30px; padding: 10px;}
+/* 메뉴바 - 서울 산토리니 루체른 */
+.listP{
+    margin: 0; padding: 0; list-style: none;
+    /* border-top: 2px solid #558600;
+    border-bottom:2px solid  #558600; */
+    background-color: #558600; 
+    display: flex; 
+}
+.listP li{
+    text-decoration: none;
+    margin-left: 50px;
+}
+.listP li a{
+    display: inline-block; 
+    padding: 15px;
+    color: var(--text-dark-color); font-size: 17px;
+    text-decoration: none;
+    text-align: center;
+}
+.listP li a:hover{
+    background-color: var(--accent-color); opacity: 0.7;
+color:white;
+}
+
+/* 굿즈 목록 */
+.goods{
+    margin: 30px 50px 5px; padding: 10px;
+    border-top: 2px solid #558600;
+    border-bottom:2px solid  #558600;
+}
+.Plist li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px; padding: 10px;
+}
+
+.Plist li a{
+    text-decoration: none;
+}
+.Plist li a:hover{
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+
+
+/* 채팅상담, TOP */
+.chatting{
+    position: fixed; 
+    bottom: 400px; right: 10px;
+    border-bottom: 2px dotted #f7c9b2;
+    text-align: center;
+    background-color: var(--main-color);
+    width: 100px; height: 100px; 
+    line-height: 100px; color: white;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+  .chatting i{
+    text-decoration: none;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    display: block;
+  }
+  .chatting button{
+    font-size: 15px;
+    background: none;
+    border: none;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .top{
+    position: fixed; 
+    bottom: 370px; right: 10px;
+    text-align: center;
+    background-color: var(--main-color);
+    width: 100px; height: 30px;
+    border-bottom-left-radius: 20px; 
+    }
+  .top a{
+    text-decoration: none;
+    color:#fff;
+  }
+
+  /* @media (max-width:767px){
+    .topbutton{
+        display: none;
+    }
+} */
+
+
+/* chat */
+
+
+/* footer */
+footer{
+    background-color: #3f3f2d;
+    color: #fff;
+}
+
+footer .container{
+    padding: 40px 20px;
+}
+
+@media (min-width: 768px){
+    footer .container{
+        display: flex; flex-wrap: wrap;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .footA{flex: 0 0 40%;}
+    .footB{flex: 0 0 60%;}
+    .footC{flex: 0 0 100%;}
+}
+
+.footA{margin-bottom: 30px;}
+.footA h2{
+    margin-top: 0; margin-bottom: 10px;
+    font-family: Montserrat, sans-serif;
+    font-size: 30px; letter-spacing: 0.2em;
+}
+.footA p{
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+.footA a{color: inherit; text-decoration: none;}
+.footB div{margin-bottom: 20px;}
+.footB h3{
+    margin-top: 0; margin-bottom: 10px;
+    font-size: 14px;
+    border-bottom: 1px solid currentColor;
+}
+
+.footB ul{margin: 0; padding: 0; list-style: none;}
+.footB a{
+    display: block;
+    padding: 5px;
+    color: inherit;
+    font-size: 12px;
+    text-decoration: none;
+}
+.footB a:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+@media (min-width: 768px){
+    .footB{display: flex;}
+    .footB div{
+        flex:1;
+    }
+    .footB div:not(:last-child){
+        margin-right: 40px;
+    }
+}
+
+.footC{
+    font-size: 12px; text-align: center;
+    font-family: Montserrat, sans-serif;
+}
+.footD{margin-top: 20px;}
+.footD ul{
+    display: flex;
+    margin: 0; padding: 0;
+    list-style-type: none;
+}
+.footD a{
+    display: block; margin-right: 8px;
+    padding: 0; color: inherit;
+    font-size: 16px; text-decoration: none;
+    border: 1px solid currentColor;
+    width: 2em; line-height: 2em;
+    text-align: center;
+    border-radius: 50%;
+}
+.footD a:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+}

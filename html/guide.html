@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/guide.css">
+      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(".headC").click(function(){
+                $(".headB").slideToggle();
+            });
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/53523cfaae.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <!-- header : 로고 + 검색 + 메뉴1 + 메뉴2 =시작 -->
+    <header>
+        <div class="container">
+
+            <div class="container-small">
+             <!-- 로고  -->
+             <a href="index.html" class="headA">SMILE :)</a>
+             <!-- 검색-->
+             <form class="search" action="https://www.google.com/search" method="get">
+                <input class="searchinput" type="search" name="q" id=""  placeholder="무엇을 찾으시나요?">
+                <button class="searchbutton" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <!-- 메뉴1_모바일 버전-->
+             <button type="button" class="headC">
+                <span class="fa fa-bars" title="MENU"></span>
+             </button>
+            </div>
+            <!-- 메뉴1  -->
+            <nav class="headD">
+                <ul>
+                    <li><button class="login"><i class="fa-solid fa-book-open-reader"></i>로그인</button></li>
+                    <li><button class="login"><i class="fa-solid fa-address-card"></i>회원가입</button></li>
+                    <li><button class="login"><i class="fa-solid fa-circle-info"></i>고객센터</button></li>
+                </ul>
+            </nav>
+
+            <!-- login madal 시작 -->
+            <div class="loginA"> 
+                <div class="loginA-content"> 
+                    <span class="close-button">&times;</span> 
+                    <h1 class="title">로그인</h1> 
+                    <form action="#post.php" method="POST"> 
+                      <label for="email">ID</label> 
+                      <input class="loginB" type="email" name="email" placeholder="아이디" required="required"> 
+                      <label>Password</label> 
+                      <input class="loginB" name="message" placeholder="비밀번호" required="required"></input> 
+                      <input type="button" class="cancel" value="취소"> 
+                      <input type="submit" class="submit" value="로그인"> 
+                    </form> 
+                </div> 
+            </div>
+        </div>
+
+        <!-- 메뉴2 -->
+        <div class="contenainer">
+            <nav class="headB">
+                <ul>
+                    <li><a href="../index.html"><i class="fa fa-bars"></i></a></li>
+                    <li><a href="../html/out.html">해외</a></li>
+                    <li><a href="../html/in.html">국내</a></li>
+                    <li><a href="../html/theme.html">테마</a></li>
+                    <li><a href="../html/guide.html">가이드</a></li>
+                    <li><a href="../html/live.html">LIVE</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header> 
+<!-- header : 로고 + 검색 + 메뉴1 +메뉴2 =끝 -->
+
+
+<!-- guide page  -->
+<div class="slideshow_back">
+<div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="../images/guide_city.png" style="width:100%">
+      <div class="text">도시</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="../images/guide_history.png" style="width:100%">
+      <div class="text">역사</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="../images/guide_rest.png" style="width:100%">
+      <div class="text">휴양지</div>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+    </div>
+</div>
+
+    <!-- guide search bar  -->
+<div class="search_wrap">
+    <div class="topnav">
+        <div class="checkbox">
+            <label class="container">도시
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container">역사
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container">휴양지
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+        </div>
+        <div class="search-container" id="search_center">
+          <form action="">
+            <input type="text" placeholder="가이드 검색" name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+
+      <!-- 가이드 전체 보기  -->
+      
+    <div class="allguide_wrap">
+
+        <div class="allguide_text">
+            <h2>가이드 소개</h2>
+        </div>
+
+        <div class="allguide">
+            <div class="all_photo">
+                <img src="../images/guide_01.png" alt="guide">
+            </div>
+            <div class="all_wrap">
+            <div class="all_text">
+                <h2>이 주 빈</h2>
+                <p>도시 전문 가이드</p>
+                <p>세계주요 도시들을 소개해 드립니다.</p>
+                <p>#터키 #쿠알라룸푸르 #뉴욕</p>
+            </div>
+            <div class="review">
+                <h2>한줄평</h2>
+                <p>여행 구성이 알차고 가이드님이 여러가지로 신경써주신 느낌이 나요.</p>
+            </div>
+            <div class="all_reserve">
+                <p><button class="all_button">예약하기</button></p>
+            </div>
+            </div>
+        </div>
+        <div class="allguide">
+            <div class="all_photo">
+                <img src="../images/guide_02.png" alt="guide">
+            </div>
+            <div class="all_text">
+                <h2>이 제 훈</h2>
+                <p>역사 전문 가이드</p>
+                <p>#타지마할 #콕스바자르 #파하르푸르</p>
+                <p>문화 유적지를 소개해드립니다.</p>
+            </div>
+            <div class="review">
+                <h2>한줄평</h2>
+                <p>처음부터 끝까지 일관성 일관되게 성의있는 설명이 너무 좋았습니다.</p>
+            </div>
+            <div class="all_reserve">
+                <p><button class="all_button">예약하기</button></p>
+            </div>
+        </div>
+        <div class="allguide">
+            <div class="all_photo">
+                <img src="../images/guide_03.png" alt="guide">
+            </div>
+            <div class="all_text">
+                <h2>안 소 희</h2>
+                <p>휴양지 전문 가이드</p>
+                <p>#모리셔스 #그리스 #세부</p>
+                <p>휴양지의 볼거리를 소개해드립니다.</p>
+            </div>
+            <div class="review">
+                <h2>한줄평</h2>
+                <p>탁 트인 느낌이 좋습니다. 마음까지 시원하게 힐링했어요.</p>
+            </div>
+            <div class="all_reserve">
+                <p><button class="all_button">예약하기</button></p>
+            </div>
+        </div>
+        <div class="allguide">
+            <div class="all_photo">
+                <img src="../images/guide_04.png" alt="guide">
+            </div>
+            <div class="all_text">
+                <h2>신 하 균</h2>
+                <p>도시 전문 가이드</p>
+                <p>#싱가포르 #두바이 #런던</p>
+                <p>재밌는 이야기와 함께하는 도시여행 입니다.</p>
+            </div>
+            <div class="review">
+                <h2>한줄평</h2>
+                <p>도시도 멋지고 중간에 도시전설 같은 재미있는 이야기도 좋았습니다.</p>
+            </div>
+            <div class="all_reserve">
+                <p><button class="all_button">예약하기</button></p>
+            </div>
+        </div>
+        <div class="allguide">
+            <div class="all_photo">
+                <img src="../images/guide_05.png" alt="guide">
+            </div>
+            <div class="all_text">
+                <h2>박 해 일</h2>
+                <p>역사 전문 가이드</p>
+                <p>#대영 박물관 #테이트 모던</p>
+                <p>박물관을 소개해드립니다.</p>
+            </div>
+            <div class="review">
+                <h2>한줄평</h2>
+                <p>설명이 지루하지 않고 귀에 잘 들어옵니다. 좋습니다.</p>
+            </div>
+            <div class="all_reserve">
+                <p><button class="all_button">예약하기</button></p>
+            </div>
+        </div>
+        <div class="allguide" id="noborder">
+            <div class="all_photo">
+                <img src="../images/guide_06.png" alt="guide">
+            </div>
+            <div class="all_text">
+                <h2>이 영 지</h2>
+                <p>휴양지 전문 가이드</p>
+                <p>#키프로스 #스리랑카 #뉴질랜드</p>
+                <p>휴양지의 멋진 풍경을 소개해드립니다.</p>
+            </div>
+            <div class="review">
+                <h2>한줄평</h2>
+                <p>쉬고 싶을 때는 무조건 휴양지에요. 망설이는 분들이 있다면 강추합니다.</p>
+            </div>
+            <div class="all_reserve">
+                <p><button class="all_button">예약하기</button></p>
+            </div>
+        </div>
+
+    </div>
+
+      
+      <!-- best guide  -->
+    <div class="best_warp">
+        <div class="month_best">
+            <h2>이달의 베스트 가이드</h2>
+        </div>
+    <div class="best_guide">
+        <div class="best_row">
+            <div class="best_column">
+              <div class="best_card">
+                <img src="../images/best_01.png" alt="guide">
+                <div class="best_container">
+                  <h2>김 연 아</h2>
+                  <p class="best_title">#파리 #로마 #이탈리아</p>
+                  <p>책에서는 배울 수 없는 현지 문화에 대한 안내를 받을 수 있습니다.</p>
+                  <p><button class="best_button">예약하기</button></p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="best_column">
+              <div class="best_card">
+                <img src="../images/best_02.png" alt="guide">
+                <div class="best_container">
+                  <h2>설 현</h2>
+                  <p class="best_title"> #루브르 #내셔널갤러리</p>
+                  <p>살아있는 역사의 숨결을 생생하게 즐길 수 있는 투어를 준비했습니다.</p>
+                  <p><button class="best_button">예약하기</button></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="best_column">
+                <div class="best_card">
+                  <img src="../images/best_03.png" alt="guide">
+                  <div class="best_container">
+                    <h2>차 은 우</h2>
+                    <p class="best_title">#경주 #경복궁 #인사동</p>
+                    <p>한국의 전통적인 문화와 역사를 함께 체험할 수 있습니다.</p>
+                    <p><button class="best_button">예약하기</button></p>
+                  </div>
+                </div>
+              </div>
+            
+            <div class="best_column">
+              <div class="best_card">
+                <img src="../images/best_04.png" alt="guide">
+                <div class="best_container">
+                  <h2>박 보 검</h2>
+                  <p class="best_title">#푸켓 #코타키나발루</p>
+                  <p>치유와 회복을 위한 마음편한 힐링 여행이 준비되어 있습니다.</p>
+                  <button class="best_button">예약하기</button></p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    </div>
+
+
+    <!-- silde show script  -->
+
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+<!-- guide page 여기까지 입니다.  -->
+
+<!-- footer : 시작 -->
+<footer>
+    <div class="container">
+        <div class="footA">
+            <h2>SMILE TRAVEL</h2>
+            <p>IT 전문 여행사 <br>
+            <a href="http://smiletravel.net">http://smiletravel.net</a>
+        </p>
+        <nav class="footD">
+            <ul>
+                <li><a href="" title="twitter"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="" title="facebook"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="" title="google-plus"><i class="fab fa-google-plus"></i></a></li>
+                <li><a href="" title="instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="" title="youtube"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </nav>
+        </div>
+    <nav class="footB">
+        <div>
+            <h3>ABOUT</h3>
+            <ul>
+                <li><a href="">회사소개</a></li>
+                <li><a href="">주소</a></li>
+                <li><a href="">지도</a></li>
+                <li><a href="">등록번호</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>SUPPORT</h3>
+            <ul>
+                <li><a href="">문의</a></li>
+                <li><a href="">고객센터</a></li>
+                <li><a href="">다운로드</a></li>
+                <li><a href="">자주묻는질문</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>CONTENTS</h3>
+            <ul>
+                <li><a href="">유튜브</a></li>
+                <li><a href="">트위터</a></li>
+                <li><a href="">페이스북</a></li>
+                <li><a href="">인스타그램</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="footC">
+        &copy; SMILE corp. All rights Reserved.
+    </div>
+
+    </div>
+</footer>
+<!-- footer : 끝 -->
+
+<!-- javascript _ login modal -->
+<script type="text/javascript"> 
+    var loginA = document.querySelector(".loginA"); 
+    var login = document.querySelector(".login"); 
+    var closeButton = document.querySelector(".close-button"); 
+    var cancelButton = document.querySelector(".cancel");
+
+   function toggleModal() { 
+    loginA.classList.toggle("show-modal"); 
+    }
+
+   function windowOnClick(event) { 
+        if (event.target === loginA) { 
+            toggleModal(); 
+        } 
+    }
+
+    login.addEventListener("click", toggleModal); 
+    closeButton.addEventListener("click", toggleModal); 
+    cancel.addEventListener("click", toggleModal); 
+    window.addEventListener("click", windowOnClick); 
+</script>
+
+</body>
+</html>

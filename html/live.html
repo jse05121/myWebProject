@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="travel">
+    <meta name="description" content="여행, 랜선, 코로나">
+
+    <title>04_LIVE</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/live.css">
+
+    <script>
+        $(function () {
+            $(".headC").click(function () {
+                $(".headB").slideToggle();
+            });
+        });
+    </script>
+
+    <script src="https://kit.fontawesome.com/53523cfaae.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <body>
+        <!-- header : 로고 + 검색 + 메뉴1 + 메뉴2 =시작 -->
+        <header>
+            <div class="container">
+
+                <div class="container-small">
+                    <!-- 로고  -->
+                    <a href="index.html" class="headA">SMILE :)</a>
+                    <!-- 검색-->
+                    <form class="search" action="https://www.google.com/search" method="get">
+                        <input class="searchinput" type="search" name="q" id="" placeholder="무엇을 찾으시나요?">
+                        <button class="searchbutton" type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                    <!-- 메뉴1_모바일 버전-->
+                    <button type="button" class="headC">
+                        <span class="fa fa-bars" title="MENU"></span>
+                    </button>
+                </div>
+                <!-- 메뉴1  -->
+                <nav class="headD">
+                    <ul>
+                        <li><button class="login"><i class="fa-solid fa-book-open-reader"></i>로그인</button></li>
+                        <li><button class="login"><i class="fa-solid fa-address-card"></i>회원가입</button></li>
+                        <li><button class="login"><i class="fa-solid fa-circle-info"></i>고객센터</button></li>
+                    </ul>
+                </nav>
+
+                <!-- login madal 시작 -->
+                <div class="loginA">
+                    <div class="loginA-content">
+                        <span class="close-button">&times;</span>
+                        <h1 class="title">로그인</h1>
+                        <form action="#post.php" method="POST">
+                            <label for="email">ID</label>
+                            <input class="loginB" type="email" name="email" placeholder="아이디" required="required">
+                            <label>Password</label>
+                            <input class="loginB" name="message" placeholder="비밀번호" required="required"></input>
+                            <input type="button" class="cancel" value="취소">
+                            <input type="submit" class="submit" value="로그인">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 메뉴2 -->
+            <div class="contenainer">
+                <nav class="headB">
+                    <ul>
+                    <li><a href="../index.html"><i class="fa fa-bars"></i></a></li>
+                    <li><a href="../html/out.html">해외</a></li>
+                    <li><a href="../html/in.html">국내</a></li>
+                    <li><a href="../html/theme.html">테마</a></li>
+                    <li><a href="../html/guide.html">가이드</a></li>
+                    <li><a href="../html/live.html">LIVE</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- header : 로고 + 검색 + 메뉴1 +메뉴2 =끝 -->
+
+        <!-- live VR 리스트 -->
+        <div class="vrproduct">
+            <h2>LIVE VR</h2>
+            <section class="vrprolistA">
+                <div class="container">
+                    <article>
+                        <a href="https://www.youtube.com/embed/xQSE5WK4CPU" target="live">
+                            <div class="photo" style="background-image: url(./img/seoultour.jpg);"></div>
+                            <div class="text">
+                                <h4>서울 힐링 여행</h4>
+                                <p>외국 친구에게 추천! <br> 서울 힐링 여행 코스</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="https://www.youtube.com/embed/tk_Dwx9RK4U" target="live">
+                            <div class="photo" style="background-image: url(./img/산토리니.jpg);"></div>
+                            <div class="text">
+                                <h4>산토리니 여행</h4>
+                                <p>이온음료를 마신듯<br>청량한 여행 </p>
+                            </div>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="https://www.youtube.com/embed/jdJKQr6Esdk" target="live">
+                            <div class="photo" style="background-image: url(./img/루체른.jpg);"></div>
+                            <div class="text">
+                                <h4>루체른 여행</h4>
+                                <p>유럽 힐링 코스를<br>가이드와 함께! </p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+        </div>
+        </section>
+
+        <!-- VR체험 -->
+        <iframe class="vrvideo" src="https://www.youtube.com/embed/jdJKQr6Esdk" frameborder="0" name="live"></iframe>
+
+        <!-- 라이브채팅 -->
+        <div id="main">
+            <h2>라이브 채팅방</h2>
+            <p>라이브 채팅을 통해 함께 여행해보세요!</p>
+            <div id="chat">
+                <!-- 채팅 메시지 영역 -->
+            </div>
+            <div>
+                <input type="text" id="test" placeholder="라이브채팅에 참여하세요!">
+                <button onclick="send()">전송</button>
+            </div>
+        </div>
+
+        <!-- 상품목록  -->
+        <div class="goods_wrap">
+            <div class="product">
+                <h2>관련 굿즈 상품</h2>
+            </div>
+            <ul class="listP">
+                <li><a href="#서울">서울</a></li>
+                <li><a href="#산토리니">산토리니</a></li>
+                <li><a href="#루체른">루체른</a></li>
+            </ul>
+
+            <div id="서울">
+                <h4 class="goods">서울 굿즈</h4>
+                <ul class="Plist">
+                    <li><a href=""><img src="../images/서울상품.JPG" alt="">
+                            <h4>나전칠기 명함집</h4>
+                            <h3>30,000</h3>
+                        </a></li>
+                    <li><a href=""><img src="../images/서울상품2.JPG" alt="">
+                            <h4>장이 자개 텀블러</h4>
+                            <h3>50,000</h3>
+                        </a></li>
+                    <li><a href=""><img src="../images/서울상품3.JPG" alt="">
+                            <h4>사랑방 호랑이 입체카드</h4>
+                            <h3>13,000</h3>
+                        </a></li>
+                    <li><a href=""><img src="../images/서울상품4.JPG" alt="">
+                            <h4>남일호 노란꽃 전통부채</h4>
+                            <h3>11,000</h3>
+                        </a></li>
+                </ul>
+            </div>
+
+            <div id="산토리니">
+                <h4 class="goods">산토리니 굿즈</h4>
+                <ul class="Plist">
+                    <li><a href=""><img src="../images/산토리니상품.JPG" alt="">
+                            <h4>산토리니 위스키 노징글라스</h4>
+                            <h3>8,000</h3>
+                        </a></li>
+                    <li><a href=""><img src="../images/산토리니상품2.JPG" alt="">
+                            <h4>산토리니 창문 패브릭 포스터</h4>
+                            <h3>10,000</h3>
+                        </a></li>
+                    <li><a href=""><img src="../images/산토리니상품3.JPG" alt="">
+                            <h4>산토리니 여행 풍경 수채화 컬러링북</h4>
+                            <h3>13,000</h3>
+                        </a></li>
+                    <li><a href=""><img src="../images/산토리니상품4.JPG" alt="">
+                            <h4>DIY 미니어처하우스 산토리니</h4>
+                            <h3>30,000</h3>
+                        </a></li>
+                </ul>
+            </div>
+
+            <div id="루체른">
+                <h4 class="goods">루체른 굿즈</h4>
+                <ul class="Plist">
+                    <li><a href=""><img src="../images/루체른상품.JPG" alt="">
+                            <h4>스위스 루체른 마그네틱 마그넷</h4>
+                            <h3>5,000</h3>
+                        </a></li>
+                    <li><a href=""><img src="../images/루체른상품2.JPG" alt="">
+                            <h4>DIY 스위스 캔버스 액자</h4>
+                            <h3>10,000</h3>
+                        </a></li>
+                    <li><a href=""><img src="../images/루체른상품3.JPG" alt="">
+                            <h4>스위스 가죽 손목 시계</h4>
+                            <h3>310,000</h3>
+                        </a></li>
+                    <li><a href=""><img src="../images/루체른상품4.JPG" alt="">
+                            <h4>1867 스위스 기념 동전 사자와 검</h4>
+                            <h3>12,000</h3>
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- main : topbutton 시작-->
+        <div class="topbutton">
+
+            <div class="chatting">
+                <button class="chat"><i class="fa-solid fa-comments"></i> 채팅상담</button>
+
+                <!-- 채팅상담 창 
+        <div id="chatA">
+            <span class="close-button">상담종료</span> 
+            <h4>채팅상담</h4> 
+            <form class="chatB" action="#post.php" method="POST"> 
+                <label>안녕하세요 고객님. 문의 사항을 적어주세요^^</label> 
+                <textarea name="message" placeholder="비밀번호" required="required"></textarea> 
+                <input type="button" class="cancel" value="취소"> 
+                <input type="submit" class="submit" value="보내기"> 
+            </form>
+        </div>-->
+            </div>
+
+            <div class="top">
+                <a href="#">TOP<i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+
+        </div>
+        <!-- main : topbutton 끝  -->
+
+        <!-- footer : 시작 -->
+        <footer>
+            <div class="container">
+                <div class="footA">
+                    <h2>SMILE TRAVEL</h2>
+                    <p>IT 전문 여행사 <br>
+                        <a href="http://smiletravel.net">http://smiletravel.net</a>
+                    </p>
+                    <nav class="footD">
+                        <ul>
+                            <li><a href="" title="twitter"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="" title="facebook"><i class="fab fa-facebook"></i></a></li>
+                            <li><a href="" title="google-plus"><i class="fab fa-google-plus"></i></a></li>
+                            <li><a href="" title="instagram"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="" title="youtube"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <nav class="footB">
+                    <div>
+                        <h3>ABOUT</h3>
+                        <ul>
+                            <li><a href="">회사소개</a></li>
+                            <li><a href="">주소</a></li>
+                            <li><a href="">지도</a></li>
+                            <li><a href="">등록번호</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>SUPPORT</h3>
+                        <ul>
+                            <li><a href="">문의</a></li>
+                            <li><a href="">고객센터</a></li>
+                            <li><a href="">다운로드</a></li>
+                            <li><a href="">자주묻는질문</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>CONTENTS</h3>
+                        <ul>
+                            <li><a href="">유튜브</a></li>
+                            <li><a href="">트위터</a></li>
+                            <li><a href="">페이스북</a></li>
+                            <li><a href="">인스타그램</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="footC">
+                    &copy; SMILE corp. All rights Reserved.
+                </div>
+
+            </div>
+        </footer>
+        <!-- footer : 끝 -->
+
+        <!-- javascript _ login modal -->
+        <script type="text/javascript">
+            var loginA = document.querySelector(".loginA");
+            var login = document.querySelector(".login");
+            var closeButton = document.querySelector(".close-button");
+            var cancelButton = document.querySelector(".cancel");
+
+            function toggleModal() {
+                loginA.classList.toggle("show-modal");
+            }
+
+            function windowOnClick(event) {
+                if (event.target === loginA) {
+                    toggleModal();
+                }
+            }
+
+            login.addEventListener("click", toggleModal);
+            closeButton.addEventListener("click", toggleModal);
+            cancel.addEventListener("click", toggleModal);
+            window.addEventListener("click", windowOnClick); 
+        </script>
+
+        <!-- js 라이브채팅 -->
+        <script>
+            var socket = io()
+
+            /* 접속 되었을 때 실행 */
+            socket.on('connect', function () {
+                /* 이름을 입력받고 */
+                var name = prompt('반갑습니다!', '')
+
+                /* 이름이 빈칸인 경우 */
+                if (!name) {
+                    name = '익명'
+                }
+
+                /* 서버에 새로운 유저가 왔다고 알림 */
+                socket.emit('newUser', name)
+            })
+
+            /* 서버로부터 데이터 받은 경우 */
+            socket.on('update', function (data) {
+                var chat = document.getElementById('chat')
+
+                var message = document.createElement('div')
+                var node = document.createTextNode(`${data.name}: ${data.message}`)
+                var className = ''
+
+                // 타입에 따라 적용할 클래스를 다르게 지정
+                switch (data.type) {
+                    case 'message':
+                        className = 'other'
+                        break
+
+                    case 'connect':
+                        className = 'connect'
+                        break
+
+                    case 'disconnect':
+                        className = 'disconnect'
+                        break
+                }
+
+                message.classList.add(className)
+                message.appendChild(node)
+                chat.appendChild(message)
+            })
+
+            /* 메시지 전송 함수 */
+            function send() {
+                // 입력되어있는 데이터 가져오기
+                var message = document.getElementById('test').value
+
+                // 가져왔으니 데이터 빈칸으로 변경
+                document.getElementById('test').value = ''
+
+                // 내가 전송할 메시지 클라이언트에게 표시
+                var chat = document.getElementById('chat')
+                var msg = document.createElement('div')
+                var node = document.createTextNode(message)
+                msg.classList.add('me')
+                msg.appendChild(node)
+                chat.appendChild(msg)
+
+                // 서버로 message 이벤트 전달 + 데이터와 함께
+                socket.emit('message', { type: 'message', message: message })
+            }
+        </script>
+
+        <!-- 라이브채팅 앱 버전 -->
+        <script>
+            /* 설치한 express 모듈 불러오기 */
+            const express = require('express')
+
+            /* 설치한 socket.io 모듈 불러오기 */
+            const socket = require('socket.io')
+
+            /* Node.js 기본 내장 모듈 불러오기 */
+            const http = require('http')
+
+            /* Node.js 기본 내장 모듈 불러오기 */
+            const fs = require('fs')
+
+            /* express 객체 생성 */
+            const app = express()
+
+            /* express http 서버 생성 */
+            const server = http.createServer(app)
+
+            /* 생성된 서버를 socket.io에 바인딩 */
+            const io = socket(server)
+
+            app.use('/css', express.static('./static/css'))
+            app.use('/js', express.static('./static/js'))
+
+            /* Get 방식으로 / 경로에 접속하면 실행 됨 */
+            app.get('/', function (request, response) {
+                fs.readFile('./static/index.html', function (err, data) {
+                    if (err) {
+                        response.send('에러')
+                    } else {
+                        response.writeHead(200, { 'Content-Type': 'text/html' })
+                        response.write(data)
+                        response.end()
+                    }
+                })
+            })
+
+            io.sockets.on('connection', function (socket) {
+
+                /* 새로운 유저가 접속했을 경우 다른 소켓에게도 알려줌 */
+                socket.on('newUser', function (name) {
+                    console.log(name + ' 님이 접속하였습니다.')
+
+                    /* 소켓에 이름 저장해두기 */
+                    socket.name = name
+
+                    /* 모든 소켓에게 전송 */
+                    io.sockets.emit('update', { type: 'connect', name: 'SERVER', message: name + '님이 접속하였습니다.' })
+                })
+
+                /* 전송한 메시지 받기 */
+                socket.on('message', function (data) {
+                    /* 받은 데이터에 누가 보냈는지 이름을 추가 */
+                    data.name = socket.name
+
+                    console.log(data)
+
+                    /* 보낸 사람을 제외한 나머지 유저에게 메시지 전송 */
+                    socket.broadcast.emit('update', data);
+                })
+
+                /* 접속 종료 */
+                socket.on('disconnect', function () {
+                    console.log(socket.name + '님이 나가셨습니다.')
+
+                    /* 나가는 사람을 제외한 나머지 유저에게 메시지 전송 */
+                    socket.broadcast.emit('update', { type: 'disconnect', name: 'SERVER', message: socket.name + '님이 나가셨습니다.' });
+                })
+            })
+
+            /* 서버를 8080 포트로 listen */
+            server.listen(8080, function () {
+                console.log('서버 실행 중..')
+            })
+
+
+        </script>
+
+    </body>
+
+</html>
